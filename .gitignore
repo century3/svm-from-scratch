@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 digits.zip
+node_modules/
+_preview.html
