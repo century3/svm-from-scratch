@@ -42,7 +42,7 @@
 我们要找一个超平面 $`\mathbf{w}^\top\mathbf{x} + b = 0`$ 把两类分开，并用
 
 ```math
-f(\mathbf{x}) = \mathbf{w}^\top\mathbf{x} + b,\qquad \hat{y} = \operatorname{sign}\big(f(\mathbf{x})\big)
+f(\mathbf{x}) = \mathbf{w}^\top\mathbf{x} + b,\qquad \hat{y} = \mathrm{sign}\big(f(\mathbf{x})\big)
 ```
 
 做预测。注意 SVM 的标签取 $`\pm1`$ 而不是 $`0/1`$，这样 "分类正确" 可以统一写成 $`y_i f(\mathbf{x}_i) > 0`$，后面的推导会简洁很多。
@@ -448,7 +448,7 @@ until 一整轮没有 α 被更新 或 达到 maxIter
 | 选第二个变量 | $`\arg\max_j \lvert E_i - E_j\rvert`$ | `selectJ`（随机版 `selectJrand`） |
 | 盒约束区间 | $`L, H`$ | `innerL` 中的 `L`、`H` |
 | 二阶导 | $`-\eta = 2K_{ij} - K_{ii} - K_{jj}`$ | `eta` |
-| 剪辑 | $`\operatorname{clip}(\alpha_j, L, H)`$ | `clipAlpha` |
+| 剪辑 | $`\mathrm{clip}(\alpha_j, L, H)`$ | `clipAlpha` |
 | 偏置 | $`b_1, b_2`$ | `b1`、`b2` |
 | 外层循环 | 全集 / 非边界交替 | `smoP` |
 | 权重向量（线性核） | $`\mathbf{w} = \sum_i\alpha_iy_i\mathbf{x}_i`$ | `calcWs` |
